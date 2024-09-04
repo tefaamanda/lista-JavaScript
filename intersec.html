@@ -8,12 +8,13 @@
         var listaUm = [1, 2, 4, 6]
         var listaDois = [3, 2, 5, 6]
         var listaJunta = []
-        listaUm.splice(0,1)
-        listaUm.splice(3,0)
-        listaDois.splice(0,1)
-        listaDois.splice(3,0)
-        listaJunta.push(listaUm)
-        listaJunta.push(listaDois)
+        for (posicao in listaUm){
+            for (posicao2 in listaDois){
+                if (listaUm[posicao] === listaDois[posicao2]){
+                 listaJunta.push(listaUm[posicao])
+                }
+            }
+        }
         alert(listaJunta)
     </script>
 </head>
